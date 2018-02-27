@@ -11,3 +11,4 @@
 # <a name="workshop"></a>Node-RED Workshop
 
 * 01.- JSONata and node 'change' <br/>
+* 02.- Replace node 'functions' with node 'change' </br>
