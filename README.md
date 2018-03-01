@@ -6,15 +6,17 @@
 * [Workshop](#workshop)
 * [Authors](#authors)
 
-# <a name="dependencies"></a>Dependencies
-* https://www.npmjs.com/package/node-red-node-cf-cloudant
+### <a name="dependencies"></a>Dependencies
+```
+https://www.npmjs.com/package/node-red-node-cf-cloudant
+```
 
-# <a name="workshop"></a>Node-RED Workshop
+## <a name="workshop"></a>Node-RED Workshop
 
 * 01.- JSONata and node 'change' <br/>
 * 02.- Replace node 'functions' with node 'change' </br>
 
-# <a name="authors"></a>Authors
+## <a name="authors"></a>Authors
 * **Carlos Rodero** - https://twitter.com/xarlie32 - rodero@icm.csic.es
 
 
