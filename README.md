@@ -1,14 +1,21 @@
 # Node-RED-material
 
-![Picture](https://github.com/Carlos-Rodero/Node-RED-material/blob/master/assets/img/node-red-icon-2.png)
+![](https://github.com/Carlos-Rodero/Node-RED-material/blob/master/assets/img/node-red-icon-2.png)
 
-* [Team Members](#team-members)
+* [Dependencies](#dependencies)
 * [Workshop](#workshop)
+* [Authors](#authors)
 
-# <a name="team-members"></a>Team Members
-* "Carlos Rodero García" <rodero@icm.csic.es>
+# <a name="dependencies"></a>Dependencies
+* https://www.npmjs.com/package/node-red-node-cf-cloudant
 
 # <a name="workshop"></a>Node-RED Workshop
 
 * 01.- JSONata and node 'change' <br/>
 * 02.- Replace node 'functions' with node 'change' </br>
+
+# <a name="authors"></a>Authors
+* **Carlos Rodero** - https://twitter.com/xarlie32 - rodero@icm.csic.es
+
+
+<!-- Markdown link & img dfn's -->
