@@ -2,7 +2,7 @@
 
 ![](https://github.com/Carlos-Rodero/Node-RED-material/blob/master/assets/img/node-red-icon-2.png)
 
-</br>
+
 ## Table of Contents
 * [Dependencies](#dependencies)
 * [Workshop](#workshop)
