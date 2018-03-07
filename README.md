@@ -12,6 +12,8 @@
 ```
 https://flows.nodered.org/node/node-red-dashboard
 https://www.npmjs.com/package/node-red-node-cf-cloudant
+https://flows.nodered.org/node/node-red-contrib-web-worldmap
+https://flows.nodered.org/node/node-red-node-watson
 ```
 
 ## <a name="workshop"></a>Node-RED Workshop
