@@ -20,6 +20,7 @@ https://flows.nodered.org/node/node-red-node-watson
 
 * 01.- JSONata and node 'change' <br/>
 * 02.- Replace node 'functions' with node 'change' </br>
+* 03.- Set random number in Dashboard: Chart, Gauge, Slider and Text</br>
 
 ## <a name="authors"></a>Authors
 * **Carlos Rodero** - https://twitter.com/xarlie32 - rodero@icm.csic.es
