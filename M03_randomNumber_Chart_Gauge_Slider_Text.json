@@ -1,0 +1,326 @@
+[
+    {
+        "id": "dbf71a8c.62285",
+        "type": "inject",
+        "z": "ca89b00e.5202a",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "x": 110,
+        "y": 140,
+        "wires": [
+            [
+                "d20b7765.36d17"
+            ]
+        ]
+    },
+    {
+        "id": "b418c18c.86fa38",
+        "type": "function",
+        "z": "ca89b00e.5202a",
+        "name": "Random #s",
+        "func": "if( msg.payload === false ) {\n    return null;\n}\nmsg.payload = Math.round(Math.random()*100);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "c2d3c479.1f07b8"
+            ]
+        ]
+    },
+    {
+        "id": "9cbdd624.560bd8",
+        "type": "ui_chart",
+        "z": "ca89b00e.5202a",
+        "name": "Chart",
+        "group": "d8aada8d.2153a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Random #",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Querying Entropy",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": true,
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7e18f792.259e88",
+        "type": "ui_gauge",
+        "z": "ca89b00e.5202a",
+        "name": "Gauge",
+        "group": "d8aada8d.2153a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 350,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "805f3c78.efb178",
+        "type": "ui_slider",
+        "z": "ca89b00e.5202a",
+        "name": "",
+        "label": "Slider",
+        "group": "d8aada8d.2153a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "",
+        "min": 0,
+        "max": "100",
+        "step": "",
+        "x": 350,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc03715b.96997",
+        "type": "ui_text",
+        "z": "ca89b00e.5202a",
+        "group": "d8aada8d.2153a8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 350,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d20b7765.36d17",
+        "type": "ui_switch",
+        "z": "ca89b00e.5202a",
+        "name": "",
+        "label": "Switch",
+        "group": "d061ae19.9ff3a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "b418c18c.86fa38"
+            ]
+        ]
+    },
+    {
+        "id": "a739200a.57ee28",
+        "type": "ui_text",
+        "z": "ca89b00e.5202a",
+        "group": "d061ae19.9ff3a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 270,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d13a19ed.9f31",
+        "type": "inject",
+        "z": "ca89b00e.5202a",
+        "name": "Instructions",
+        "topic": "",
+        "payload": "Use the toggle switch to start / stop the generation of random numbers",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "a739200a.57ee28"
+            ]
+        ]
+    },
+    {
+        "id": "25af07e0.62a67",
+        "type": "ui_toast",
+        "z": "ca89b00e.5202a",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "topic": "",
+        "name": "",
+        "x": 790,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "58f06125.b50eb",
+        "type": "switch",
+        "z": "ca89b00e.5202a",
+        "name": "Warn on High Values",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "80",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "e2305c22.34f19"
+            ]
+        ]
+    },
+    {
+        "id": "e2305c22.34f19",
+        "type": "template",
+        "z": "ca89b00e.5202a",
+        "name": "Alert Msg",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Alert : Critical Value Detected {{payload}}",
+        "output": "str",
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "25af07e0.62a67"
+            ]
+        ]
+    },
+    {
+        "id": "c2d3c479.1f07b8",
+        "type": "link out",
+        "z": "ca89b00e.5202a",
+        "name": "",
+        "links": [
+            "14664075.cda11"
+        ],
+        "x": 555,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "14664075.cda11",
+        "type": "link in",
+        "z": "ca89b00e.5202a",
+        "name": "",
+        "links": [
+            "c2d3c479.1f07b8"
+        ],
+        "x": 95,
+        "y": 360,
+        "wires": [
+            [
+                "9cbdd624.560bd8",
+                "7e18f792.259e88",
+                "805f3c78.efb178",
+                "cc03715b.96997",
+                "58f06125.b50eb"
+            ]
+        ]
+    },
+    {
+        "id": "d8aada8d.2153a8",
+        "type": "ui_group",
+        "z": "ca89b00e.5202a",
+        "name": "Dashboard Controls",
+        "tab": "bff35214.8fd128",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "d061ae19.9ff3a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Start / Stop",
+        "tab": "bff35214.8fd128",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "bff35214.8fd128",
+        "type": "ui_tab",
+        "z": "ca89b00e.5202a",
+        "name": "Introduction",
+        "icon": "dashboard",
+        "order": 2
+    }
+]
